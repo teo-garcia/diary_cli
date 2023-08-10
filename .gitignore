@@ -1,0 +1,18 @@
+# Ignore the virtual environment (venv)
+venv/
+
+# Ignore user data files
+app/data/*.json
+
+# Ignore log and cache files (if generated)
+*.log
+__pycache__/
+*.pyc
+
+# Ignore installed dependencies files
+*.egg-info/
+dist/
+build/
+
+# VSCode Settings
+.vscode
