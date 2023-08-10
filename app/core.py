@@ -39,3 +39,12 @@ def get_entries():
 
 def format_entry(entry):
   return f"{entry['id']}. {entry['description']}"
+
+def delete_entry(entry_id):
+  with open(DIARY_FILE, 'r') as file:
+    entries = json.load(file)
+  
+  entries = [entry for entry in entries if entry['id'] != entry_id]
+
+  with open(DIARY_FILE, 'w') as file:
+    json.dump(entries, file, indent=2)
